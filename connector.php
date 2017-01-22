@@ -2,7 +2,7 @@
 
 require_once "send_simple.php";
 
-$confirmation_token = 'd5c51871';
+$confirmation_token = 'строка которуую должен вернуть сервер';
 
 $data = json_decode(file_get_contents('php://input')); 
 
