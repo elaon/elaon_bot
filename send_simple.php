@@ -4,9 +4,9 @@ if (!isset($_REQUEST)) {
   return; 
 } 
 
-$confirmation_token = 'd5c51871'; 
+$confirmation_token = 'строка которуую должен вернуть сервер'; 
 
-$token = 'd54cf8f36e3e58907d282255db61dc9e62349e69f9d68516c1fbebea44a4d607be0534ecdf71ab3d65123'; 
+$token = 'ключ доступа сообщества с правами сообщения';
 
 $data = json_decode(file_get_contents('php://input')); 
 
