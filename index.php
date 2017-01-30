@@ -5,10 +5,10 @@ if (!isset($_REQUEST)) {
 } 
 
 //Строка для подтверждения адреса сервера из настроек Callback API 
-$confirmation_token = 'd5c51871'; 
+$confirmation_token = '...'; 
 
-//Ключ доступа сообщества 
-$token = 'ba7b4a4d0264aedb7d68a8544c59b9271fd9e57ac3983efd0d21774ac787a01c1c8caa0ed98200013d740'; 
+//Ключ доступа сообщества с правами отправки ссобщений
+$token = '...'; 
 
 //Получаем и декодируем уведомление 
 $data = json_decode(file_get_contents('php://input')); 
@@ -30,7 +30,7 @@ switch ($data->type) {
 
 //и извлекаем из ответа его имя 
     $user_name = $user_info->response[0]->first_name;
-	$last_name = $user_info->response[0]->last_name;
+    $last_name = $user_info->response[0]->last_name;
 	
 //Получаем текст сообщения
     $body = $data->object->body;
